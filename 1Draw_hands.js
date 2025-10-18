@@ -5,7 +5,7 @@ function prepareInteraction() {
 }
 
 function drawInteraction(faces, hands) {
-  image(bgImage,-352,-145,2000,990);
+  image(bgImage,-352,-160,2000,1110);
   // hands part
   // for loop to capture if there is more than one hand on the screen. This applies the same process to all hands.
   for (let i = 0; i < hands.length; i++) {
