@@ -39,6 +39,7 @@ function drawInteraction(faces, hands) {
     fill(225, 225, 0);
 
     ellipse(thumbTipX, thumbTipY, 30, 30);
+    rect(thumbTipX-30, thumbTipY-30, 40, 40);
 
     ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
 
