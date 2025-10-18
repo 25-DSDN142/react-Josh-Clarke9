@@ -4,7 +4,8 @@
 
 /* load images here */
 function prepareInteraction() {
-  //bgImage = loadImage('/images/background.png');
+  bgImage = loadImage('/images/background.JPG');
+  pbImage = loadImage('/images/PAINTBRUSH.PNG');
 }
 
 let px = 0;
@@ -15,6 +16,9 @@ let Yvalue = 0
 
 
 function drawInteraction(faces, hands) {
+
+  image(bgImage,-352,-160,2000,1070);
+
   colors = [
     color(255, 18, 18), // red 
     color(38, 18, 255), // blue 
@@ -39,6 +43,7 @@ function drawInteraction(faces, hands) {
     /*
     Start drawing on the hands here
     */
+
     if (hand.handedness === "Left") {
       Yvalue = hand.index_finger_tip.y; // this will stay as zer untill the program sees a left hand 
     }
@@ -55,8 +60,10 @@ function drawInteraction(faces, hands) {
 
       let d = dist(indexFingerTipX, indexFingerTipY, thumbTipX, thumbTipY);
 
-      fill(selectedColor)
-      ellipse(x, y, 50)
+      // fill(selectedColor)
+      // ellipse(x, y, 50)
+
+      image(pbImage,x,y,100,100);
 
       if (d < 50) {
         painting.stroke(selectedColor);

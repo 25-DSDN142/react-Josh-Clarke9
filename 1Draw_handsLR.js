@@ -25,6 +25,17 @@ function drawInteraction(faces, hands) {
 
     let whatGesture = detectHandGesture(hand)
 
+      ellipse(thumbTipX, thumbTipY, 30, 30);
+    rect(thumbTipX-30, thumbTipY-30, 40, 40);
+
+    ellipse(indexFingerTipX, indexFingerTipY, 30, 30);
+
+    ellipse(middleFingerTipX, middleFingerTipY, 30, 30);
+
+    ellipse(ringFingerTipX, ringFingerTipY, 30, 30);
+
+    ellipse(pinkyFingerTipX, pinkyFingerTipY, 30, 30);
+
     if (whatGesture == "Peace") {
       fill(255, 38, 219) // pink
     }
@@ -39,6 +50,8 @@ function drawInteraction(faces, hands) {
 
     if (hand.handedness === "Left") {
      ellipse(middleFingerMcpX, middleFingerMcpY, 100)
+
+     
     }
     /*
     Stop drawing on the hands here
