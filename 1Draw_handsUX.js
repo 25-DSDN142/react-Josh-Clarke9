@@ -63,11 +63,11 @@ function drawInteraction(faces, hands) {
       // fill(selectedColor)
       // ellipse(x, y, 50)
 
-      image(pbImage,x,y,100,100);
+      image(pbImage,x-3,y-88,100,100);
 
       if (d < 50) {
         painting.stroke(selectedColor);
-        painting.strokeWeight(16);
+        painting.strokeWeight(8);
         painting.line(px, py, x, y);
       }
       px = x;
