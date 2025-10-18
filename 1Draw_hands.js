@@ -1,10 +1,11 @@
 // ----=  HANDS  =----
 /* load images here */
 function prepareInteraction() {
-  bgImage = loadImage('/images/background.png');
+  bgImage = loadImage('/images/background.JPG');
 }
 
 function drawInteraction(faces, hands) {
+  image(bgImage,-352,-145,2000,990);
   // hands part
   // for loop to capture if there is more than one hand on the screen. This applies the same process to all hands.
   for (let i = 0; i < hands.length; i++) {
@@ -13,7 +14,7 @@ function drawInteraction(faces, hands) {
     if (showKeypoints) {
       drawConnections(hand)
     }
-    image(bgImage,0,0);
+    
     // This is how to load in the x and y of a point on the hand.
 
     let thumbTipX = hand.thumb_tip.x;
@@ -49,6 +50,7 @@ function drawInteraction(faces, hands) {
 
     ellipse(pinkyFingerTipX, pinkyFingerTipY, 30, 30);
 
+    
 
     // drawPoints(hand)
 
@@ -63,7 +65,6 @@ function drawInteraction(faces, hands) {
   // You can make addtional elements here, but keep the hand drawing inside the for loop. 
   //------------------------------------------------------
 }
-
 
 
 
