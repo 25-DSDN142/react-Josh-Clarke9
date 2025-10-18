@@ -23,7 +23,7 @@ function drawInteraction(faces, hands) {
     color(255, 18, 18), // red 
     color(38, 18, 255), // blue 
     color(42, 255, 18), // green
-    color(255, 176, 18), // orange
+    color(0,0,0), // black
 
   ];
 
