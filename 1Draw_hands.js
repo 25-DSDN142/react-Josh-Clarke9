@@ -1,7 +1,7 @@
 // ----=  HANDS  =----
 /* load images here */
 function prepareInteraction() {
-  //bgImage = loadImage('/images/background.png');
+  bgImage = loadImage('/images/background.png');
 }
 
 function drawInteraction(faces, hands) {
@@ -13,7 +13,7 @@ function drawInteraction(faces, hands) {
     if (showKeypoints) {
       drawConnections(hand)
     }
-
+    image(bgImage,0,0);
     // This is how to load in the x and y of a point on the hand.
 
     let thumbTipX = hand.thumb_tip.x;
